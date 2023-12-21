@@ -1,0 +1,13 @@
+.bgImg {
+
+    color: white;
+    background: rgba(0, 0, 0, .4) url('../../../../../assets/Image/bible-1868070_1920.jpg') no-repeat center;
+    background-size: cover;
+    background-blend-mode: darken;
+    height: 550px;
+
+}
+
+.bdetails{
+    background-color: rgb(241, 233, 233);
+}

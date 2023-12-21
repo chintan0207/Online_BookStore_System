@@ -1,0 +1,12 @@
+.red{
+    color: red;
+}
+
+.bgImg{
+    
+    color: white;
+    background: rgba(0,0,0,.7) url('../../../../../assets/Image/a-book-3088775_1920.jpg') no-repeat center ;
+    background-size: cover;
+    background-blend-mode: darken;
+    height:570px;
+}

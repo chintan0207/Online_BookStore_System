@@ -1,0 +1,20 @@
+<div class="bgImg p-4">
+    <div class="container card p-3 bdetails">
+        <h5> View Book Details</h5>
+        <div *ngIf="book">
+            <div>
+                <label> <b> Book Id :</b></label> {{book.id}}
+            </div>
+            <div>
+                <label> <b> Book Name : </b></label> {{book.bookName}}
+            </div>
+            <div>
+                <label> <b> Book Author : </b></label> {{book.author}}
+            </div>
+            <div>
+                <label> <b> Book Price : </b></label>Rs. {{book.bookPrice}} /-
+            </div>
+        </div>
+
+    </div>
+</div>

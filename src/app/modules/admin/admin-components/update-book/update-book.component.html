@@ -1,0 +1,77 @@
+<div class="bgImg p-5">
+<div class="container card p-3 update">
+    <h4>Update Book</h4>
+    <!-- <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group my-3">
+            <label> Book Id</label>
+            <input type="number" class ="form-control" id = "bookid"
+                [(ngModel)] = "book.id" name = "bookid" >
+        </div>
+    
+        <div class="form-group my-3">
+            <label> Book Name</label>
+            <input type="text" class ="form-control" id = "bookName"
+                [(ngModel)] = "book.bookName" name = "bookName" >
+        </div>
+    
+        <div class="form-group my-3">
+            <label> Author</label>
+            <input type="text" class ="form-control" id = "author"
+                [(ngModel)] = "book.author" name = "author" >
+        </div>
+
+        
+        <div class="form-group my-3">
+            <label>Book Price</label>
+            <input type="number" class ="form-control" id = "bookPrice"
+                [(ngModel)] = "book.bookPrice" name = "bookPrice" >
+        </div>
+    
+        <button class="btn btn-success" type="submit">Submit</button>
+    
+    </form> -->
+    <form #myForm="ngForm" (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group my-3">
+            <label> Book Id</label>
+            <input type="number" class ="form-control" id = "bookid"
+                [(ngModel)] = "book.id" name = "bookid" ngModel required #bookId="ngModel">
+                <div *ngIf="bookId.invalid && (bookId.dirty || bookId.touched)" class="red">
+                    <div *ngIf="bookId.errors">BookId is required !</div>
+                  </div>       
+        </div>
+    
+        <div class="form-group my-3">
+            <label> Book Name</label>
+            <input type="text" class ="form-control" id = "bookName"
+                [(ngModel)] = "book.bookName" name = "bookName" ngModel required #bookName="ngModel">
+                <div *ngIf="bookName.invalid && (bookName.dirty || bookName.touched)" class="red">
+                    <div *ngIf="bookName.errors">BookName is required !</div>
+                  </div>   
+        </div>
+    
+        <div class="form-group my-3">
+            <label> Author</label>
+            <input type="text" class ="form-control" id = "author"
+                [(ngModel)] = "book.author" name = "author" ngModel required #author="ngModel">
+                <div *ngIf="author.invalid && (author.dirty || author.touched)" class="red">
+                    <div *ngIf="author.errors">Author is required !</div>
+                  </div>   
+        </div>
+
+        
+        <div class="form-group my-3">
+            <label>Book Price</label>
+            <input type="number" class ="form-control" id = "bookPrice"
+                [(ngModel)] = "book.bookPrice" name = "bookPrice" ngModel required #bookPrice="ngModel">
+             <div *ngIf="bookPrice.invalid && (bookPrice.dirty || bookPrice.touched)" class="red">
+                    <div *ngIf="bookPrice.errors">BookPrice is required !</div>
+                  </div>   
+        </div>
+    
+        <button class="btn btn-success" type="submit" [disabled]="myForm.invalid">Submit</button>
+    
+    </form>
+    </div>
+</div>

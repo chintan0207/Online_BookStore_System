@@ -1,0 +1,24 @@
+.bgImg{
+    display: flex;
+    color: white;
+    background: rgba(0,0,0,.7) url('../../assets/Image/a-book-3088775_1920.jpg') no-repeat center ;
+    background-size: cover;
+    background-blend-mode: darken;
+    min-height: 550px;
+}
+
+.login{
+    
+    border: 1px solid white;
+    border-radius: 5px;
+    height:400px;
+    width: 350px;
+    
+}
+.spanr{
+    cursor: pointer;
+}
+
+.red{
+    color: red;
+}

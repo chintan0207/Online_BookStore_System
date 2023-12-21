@@ -1,0 +1,40 @@
+<div class="bgImg">
+    <div class="container mt-5 ">
+        <div class="fortable p-4 pt-2 card">
+           <h4 class="m-2">Availabel Books</h4> 
+           <form class="form-inline my-2 my-lg-0 d-flex gap-3">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" name="searchTerm" [(ngModel)]="searchTerm" (input)="onSearch()">
+            <!-- <span class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="onSearch()">Search</span> -->
+          </form>
+            <table class="table table-striped mt-3">
+                <thead>
+                    <tr>
+                        <th>BookId</th>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>book Price</th>
+                        <th>Actions </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let book of books">
+                        <td>{{book.id}}</td>
+                        <td>{{book.bookName}}</td>
+                        <td>{{book.author}}</td>
+                        <td>Rs. {{book.bookPrice}} /-</td>
+
+                        <td class="action-btn2 abtn">
+                            <i (click)="updateBook(book.id)" class="fa-solid fa-pen-to-square i1"></i>
+                            <i (click)="deleteBook(book.id)" class="fa-solid fa-trash i2"></i>
+                            <i (click)="bookDetails(book.id)" class="fa-solid fa-eye i3"></i>
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

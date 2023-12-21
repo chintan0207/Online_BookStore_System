@@ -1,0 +1,18 @@
+.bgImg {
+
+    color: white;
+    background: rgba(0, 0, 0, .5) url('../../../../../assets/Image/tea-time-3240766_1920.jpg') no-repeat center;
+    background-size: cover;
+    background-blend-mode: darken;
+    height: 550px;
+
+}
+
+.update{
+    width: 500px;
+}
+
+.red{
+    color: red;
+    padding: 5px;
+}

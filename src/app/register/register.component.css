@@ -1,0 +1,18 @@
+.register{
+    /* border: 1px solid white; */
+    border-radius: 5px;
+    height:500px;
+    width: 450px;
+
+}
+
+.bgImg{
+color: white;
+background: rgba(0,0,0,.7) url('../../assets/Image/a-book-3088775_1920.jpg') no-repeat center ;
+background-size: cover;
+background-blend-mode: darken;
+height: 100vh;
+}
+.red{
+    color: red;
+}
