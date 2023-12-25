@@ -1,0 +1,22 @@
+.c1 {
+
+    color: white;
+    background: rgba(0, 0, 0, .8) url('../../../../../assets/Image/bookshelf-413705_1920.jpg') no-repeat center;
+    background-size: cover;
+    background-blend-mode: darken;
+    height: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+p{
+    margin-left: 10px;
+}
+
+p i{
+    font-size: 20px;
+    cursor: pointer;
+}

@@ -3,6 +3,8 @@ import { Book } from '../../../../book';
 import { BookService } from '../../../../book.service';
 import { Router } from '@angular/router';
 
+import { error } from 'console';
+
 @Component({
   selector: 'app-show-booklist',
   templateUrl: './show-booklist.component.html',
@@ -10,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class ShowBooklistComponent {
 
-   
+  
   books: Book[];
   searchTerm: string = '';
 
@@ -21,7 +23,10 @@ export class ShowBooklistComponent {
 
   ngOnInit(): void {
     this.getBooks();
+    
   }
+
+
 
   private getBooks(){
     event?.preventDefault();
@@ -33,16 +38,29 @@ export class ShowBooklistComponent {
   
 
   bookDetails(id: number){
-        this.router.navigateByUrl(`customer/book-details/${id}`)
+        this.router.navigateByUrl(`customer/book-details/${id}`);
   }
 
-  
+  // addMyBook(id: number){
+  //   this.bookService.getBookById(id).subscribe((res) =>{
+  //     this.book = res;
+  //     console.log(res)
+  //     this.addBookToMyBooks();
+  //   },error => console.log(error))
+    
+  // }
+
+  // addBookToMyBooks(){
+  //   this.myBookService.addBookToMyBooks(this.book).subscribe
+  // }
+
+
   onSearch() {
     this.bookService.getBooksByName(this.searchTerm).subscribe((data: any) => {
       this.books = data;
     });
    
 
-}
+    }
 
 }

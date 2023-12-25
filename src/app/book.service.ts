@@ -10,12 +10,12 @@ export class BookService {
 
   id:number;
 
-  private baseURL = "http://localhost:8080/api/book";
+  private baseURL = "http://localhost:9090/api/auth/book";
 
   constructor(private httpclient: HttpClient) { }
 
   getBooksList(): Observable<Book[]>{
-    return this.httpclient.get<Book[]>("http://localhost:8080/api/book/name/");
+    return this.httpclient.get<Book[]>("http://localhost:9090/api/auth/book/name/");
   }
 
   deleteBook(id: number): Observable <object>{

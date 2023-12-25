@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { StorageService } from './services/storage/storage.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,10 @@ export class AppComponent implements OnInit {
 
   isAdminLoggedIn: boolean
   isCustomerLoggedIn: boolean
-  constructor(private router: Router){ }
+
+  constructor(private router: Router){
+    
+     }
 
 ngOnInit(){
   this.router.events.subscribe(event => {

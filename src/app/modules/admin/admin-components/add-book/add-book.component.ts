@@ -39,7 +39,7 @@ export class AddBookComponent {
   }
 
   goToBookList() {
-    this.router.navigate(['/booklist'])
+    this.router.navigateByUrl('admin/show-booklist');
   }
 
 
@@ -48,7 +48,7 @@ export class AddBookComponent {
       if (this.validateForm.valid) {
 
         this.book = { ...this.validateForm.value };
-        console.log(this.book);
+    
          this.saveBook();
       } else {
         alert('Please fill in all required fields');
