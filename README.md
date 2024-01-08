@@ -1,3 +1,12 @@
+
+# Online BookStore System
+Online Bookstore is full-stack application in which Books are add,
+delete, update, and view. 
+
+There are two modules in application user-module and admin-module.
+
+Tech : Angular, Spring-boot, MySQL
+
 # BookStoreApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.5.
