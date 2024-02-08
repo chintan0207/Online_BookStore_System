@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-const BASIC_URL = ["http://localhost:9090/"]
+const BASIC_URL = ["https://bookstore822024-production.up.railway.app/"]
 
 @Injectable({
   providedIn: 'root'
